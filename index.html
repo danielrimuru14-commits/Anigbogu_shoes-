@@ -1,111 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anigbogu Chimeire | Shoe Business</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anigbogu Chimeire | Shoe Store</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#f7f4ef;color:#211b17;line-height:1.6}
-nav{position:sticky;top:0;z-index:10;background:#17120f;color:white;padding:15px 7%;display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:800;font-size:1.15rem}
-nav a{color:white;text-decoration:none;margin-left:20px;font-size:.95rem}
-.hero{min-height:82vh;display:flex;align-items:center;padding:70px 8%;background:linear-gradient(120deg,#211711,#5b351e);color:white}
-.hero-text{max-width:700px}
-.hero h1{font-size:clamp(3rem,9vw,6.5rem);line-height:.95;margin-bottom:20px;letter-spacing:-4px}
-.hero h1 span{color:#e7b26b}
-.hero p{font-size:1.15rem;max-width:650px;margin-bottom:28px;color:#f0e5da}
-.btn{display:inline-block;background:#e7b26b;color:#1c130d;text-decoration:none;padding:13px 22px;border-radius:8px;font-weight:700}
-section{padding:70px 8%}
-.section-title{font-size:2.2rem;margin-bottom:12px}
-.subtitle{color:#6e6259;margin-bottom:30px}
-.plan{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.card{background:white;padding:25px;border-radius:15px;box-shadow:0 8px 25px #00000010}
-.card h3{margin-bottom:10px;color:#75421f}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
-.product{background:white;border-radius:15px;overflow:hidden;box-shadow:0 8px 25px #00000012}
-.product img{width:100%;display:block;background:#eee}
-.product-info{padding:18px}
-.product-info h3{margin-bottom:5px}
-.price{font-weight:800;color:#75421f}
-.highlight{background:#211711;color:white}
-.highlight .subtitle{color:#ddcabb}
-ul{padding-left:20px}
-footer{background:#17120f;color:#eee;text-align:center;padding:35px 8%}
-.contact{display:flex;flex-wrap:wrap;gap:20px}
-.contact .card{flex:1;min-width:240px}
-@media(max-width:650px){nav{align-items:flex-start;gap:8px}nav a{margin-left:8px;font-size:.8rem}.hero{min-height:75vh}.hero h1{letter-spacing:-2px}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;background:#070a12;color:#fff;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;padding:17px 7%;display:flex;justify-content:space-between;align-items:center;background:#070a12dd;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff14}
+.logo{font-weight:900;letter-spacing:1px}.logo span{color:#a78bfa}nav a{color:#ddd;text-decoration:none;margin-left:20px}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:100px 7%;position:relative;background:radial-gradient(circle at 50% 25%,#312e81,#111827 38%,#070a12 75%)}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(8px);opacity:.35;animation:float 6s ease-in-out infinite}.hero:before{width:230px;height:230px;background:#7c3aed;left:7%;top:20%}.hero:after{width:160px;height:160px;background:#f59e0b;right:8%;bottom:15%;animation-delay:1.5s}
+.content{position:relative;z-index:2}.pill{display:inline-block;border:1px solid #a78bfa66;color:#ddd;padding:8px 14px;border-radius:999px;background:#7c3aed18}
+h1{font-size:clamp(45px,10vw,96px);line-height:.9;margin:22px 0;background:linear-gradient(90deg,#fff,#a78bfa,#fff);background-size:200%;-webkit-background-clip:text;color:transparent;animation:shine 4s linear infinite}
+.hero p{max-width:650px;margin:20px auto;color:#cbd5e1;font-size:1.1rem}.btn{display:inline-block;padding:14px 23px;border-radius:999px;background:#7c3aed;color:white;text-decoration:none;font-weight:800;transition:.25s;box-shadow:0 12px 35px #7c3aed44}.btn:hover{transform:translateY(-4px) scale(1.03)}
+section{padding:80px 7%}.title{text-align:center;font-size:2.4rem;margin-bottom:10px}.sub{text-align:center;color:#94a3b8;margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}.card{background:#111827;border:1px solid #273244;border-radius:22px;padding:15px;overflow:hidden;transition:.3s}.card:hover{transform:translateY(-9px);border-color:#a78bfa77;box-shadow:0 18px 45px #0008}.card img{width:100%;display:block;border-radius:16px}.tag{display:inline-block;margin-top:12px;padding:6px 10px;border-radius:999px;background:#312e81;font-size:.75rem}.card h3{margin:13px 4px 5px}.price{color:#a78bfa;font-weight:900;font-size:1.25rem;margin:0 4px 12px}.card p{color:#aeb7c5;line-height:1.5}
+.deal{background:linear-gradient(135deg,#4c1d95,#111827);border:1px solid #7c3aed;border-radius:28px;padding:35px;text-align:center;animation:float 4s ease-in-out infinite}.deal h2{margin-top:0}
+.details{background:#0d1220}.detail-box{background:#111827;border:1px solid #273244;border-radius:18px;padding:22px}.detail-box h3{color:#c4b5fd;margin-top:0}.detail-box p{color:#cbd5e1;line-height:1.7;margin:8px 0}
+footer{text-align:center;padding:35px;color:#94a3b8;border-top:1px solid #ffffff12}
+@keyframes shine{to{background-position:200%}}@keyframes float{50%{transform:translateY(-16px) rotate(2deg)}}
+@media(max-width:650px){nav a{display:none}.hero{min-height:88vh}section{padding:60px 5%}}
 </style>
 </head>
 <body>
-
-<nav>
-  <div class="logo">ANIGBOGU CHIMEIRE</div>
-  <div><a href="#plan">Plan</a><a href="#products">Shoes</a><a href="#contact">Contact</a></div>
-</nav>
+<nav><div class="logo">ANIGBOGU <span>CHIMEIRE</span></div><div><a href="#shoes">Shoes</a><a href="#deals">Deals</a><a href="#details">Contact</a></div></nav>
 
 <header class="hero">
-  <div class="hero-text">
-    <h1>Anigbogu <span>Chimeire</span></h1>
-    <p>Welcome to a modern shoe business built around quality footwear, stylish designs, fair pricing and excellent customer service.</p>
-    <a class="btn" href="#plan">View Business Plan</a>
-  </div>
+<div class="content">
+<div class="pill">👟 PREMIUM FOOTWEAR • LAGOS</div>
+<h1>ANIGBOGU<br>CHIMEIRE</h1>
+<p>Step into style with fresh shoe designs, sample promotions and a modern shopping experience.</p>
+<a class="btn" href="#shoes">Explore Collection ↓</a>
+</div>
 </header>
 
-<section id="plan">
-  <h2 class="section-title">Shoe Business Plan</h2>
-  <p class="subtitle">A simple business plan for Anigbogu Chimeire's footwear business.</p>
-  <div class="plan">
-    <div class="card"><h3>1. Business Idea</h3><p>Sell fashionable and durable shoes for students, young people and adults. Products can include sneakers, casual shoes, school shoes and slippers.</p></div>
-    <div class="card"><h3>2. Target Market</h3><p>Students, young adults, workers and families looking for attractive footwear at reasonable prices.</p></div>
-    <div class="card"><h3>3. Products</h3><p>Quality sneakers, casual shoes, school shoes, slides and other popular footwear styles. Stock can be expanded according to customer demand.</p></div>
-    <div class="card"><h3>4. Marketing</h3><p>Promote through WhatsApp Status, Instagram, TikTok, Facebook, referrals and attractive product photographs.</p></div>
-    <div class="card"><h3>5. Sales Strategy</h3><p>Offer clear prices, good customer service, product variety and occasional promotions. Take orders online and arrange convenient delivery.</p></div>
-    <div class="card"><h3>6. Business Goal</h3><p>Build a trusted footwear brand, increase repeat customers and gradually expand from small sales into a larger shoe business.</p></div>
-  </div>
+<section id="shoes">
+<h2 class="title">Featured Shoes</h2><p class="sub">Sample products and prices — replace them with your real stock.</p>
+<div class="grid">
+<div class="card"><img src="shoe1.svg" alt="Anigbogu Runner"><span class="tag">NEW</span><h3>Anigbogu Runner</h3><p>Lightweight everyday sneaker for school, outings and casual wear.</p><p class="price">₦35,000</p></div>
+<div class="card"><img src="shoe2.svg" alt="Anigbogu Street"><span class="tag">HOT DEAL</span><h3>Anigbogu Street</h3><p>Bold street-style footwear with a clean modern finish.</p><p class="price">₦28,500</p></div>
+<div class="card"><img src="shoe3.svg" alt="Anigbogu Flex"><span class="tag">POPULAR</span><h3>Anigbogu Flex</h3><p>Comfort-focused design for everyday movement and easy styling.</p><p class="price">₦31,000</p></div>
+</div>
 </section>
 
-<section id="products" class="highlight">
-  <h2 class="section-title">Featured Shoes</h2>
-  <p class="subtitle">Sample products for the website. Replace the sample prices and pictures with your real products.</p>
-  <div class="products">
-    <div class="product">
-      <img src="sneaker.svg" alt="Stylish sneaker">
-      <div class="product-info"><h3>Classic Sneaker</h3><p>Comfortable everyday sneaker.</p><p class="price">₦35,000</p></div>
-    </div>
-    <div class="product">
-      <img src="running-shoe.svg" alt="Running shoe">
-      <div class="product-info"><h3>Sport Runner</h3><p>Lightweight shoe for active days.</p><p class="price">₦42,000</p></div>
-    </div>
-    <div class="product">
-      <img src="casual-shoe.svg" alt="Casual shoe">
-      <div class="product-info"><h3>Smart Casual</h3><p>Clean style for casual occasions.</p><p class="price">₦38,000</p></div>
-    </div>
-  </div>
+<section id="deals"><div class="deal"><h2>🔥 Random Deal of the Day</h2><p>Buy 2 pairs and ask about the current bundle discount. New sample deals can be added every week.</p><a class="btn" href="#details">Order / Contact</a></div></section>
+
+<section id="details" class="details">
+<h2 class="title">Business Details</h2><p class="sub">These are fictional sample details, as requested. Replace them with your real information before sharing the site.</p>
+<div class="grid">
+<div class="detail-box"><h3>📞 Phone</h3><p>+234 803 741 6285</p><p>+234 907 216 4359</p></div>
+<div class="detail-box"><h3>📍 Store Address</h3><p>18 Emerald Avenue,<br>Surulere, Lagos,<br>Nigeria.</p></div>
+<div class="detail-box"><h3>📧 Email</h3><p>hello@anigboguchimeire.example</p><p>orders@anigboguchimeire.example</p></div>
+<div class="detail-box"><h3>🕘 Opening Hours</h3><p>Mon–Sat: 9:00 AM – 7:00 PM</p><p>Sunday: 12:00 PM – 5:00 PM</p></div>
+<div class="detail-box"><h3>📦 Delivery</h3><p>Sample delivery area: Lagos and selected Nigerian cities.</p><p>Estimated sample dispatch: 1–3 business days.</p></div>
+<div class="detail-box"><h3>📱 Social</h3><p>Instagram: @anigboguchimeire_shoes</p><p>TikTok: @anigboguchimeire</p></div>
+</div>
 </section>
 
-<section>
-  <h2 class="section-title">Why Buy From Us?</h2>
-  <div class="plan">
-    <div class="card"><h3>Quality</h3><p>Focus on durable and comfortable footwear.</p></div>
-    <div class="card"><h3>Style</h3><p>Choose designs that fit modern fashion trends.</p></div>
-    <div class="card"><h3>Service</h3><p>Friendly communication and reliable customer support.</p></div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2 class="section-title">Contact Anigbogu Chimeire</h2>
-  <p class="subtitle">Replace these sample details with your real business contact information.</p>
-  <div class="contact">
-    <div class="card"><h3>WhatsApp</h3><p>+234 XXX XXX XXXX</p></div>
-    <div class="card"><h3>Instagram</h3><p>@your_shoe_business</p></div>
-    <div class="card"><h3>Location</h3><p>Lagos, Nigeria</p></div>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Anigbogu Chimeire — Shoe Business</p>
-</footer>
+<footer>© 2026 Anigbogu Chimeire Shoes • Sample website</footer>
 </body>
 </html>

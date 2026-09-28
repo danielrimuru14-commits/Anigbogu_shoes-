@@ -1,9 +1,5 @@
-ANIGBOGU CHIMEIRE — NEW WEBSITE
+ANIGBOGU CHIMEIRE - NO PASSWORD VERSION
 
-Password: Anigbogu
+Open index.html. The site shows an animated intro and then opens the storefront automatically. Tap any shoe to view its details.
 
-This is a front-end demo login. The password is stored in script.js, so it is NOT secure authentication for sensitive/private information. For a real store, use server-side authentication.
-
-Images in /images were cropped from the product screenshots supplied by the site owner.
-
-To publish on GitHub Pages, upload index.html, style.css, script.js and the entire images folder into the root of the repository.
+The phone, address and email shown are sample details and should be replaced before publishing as a real business site.
